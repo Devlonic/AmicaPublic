@@ -1,0 +1,5 @@
+<div class="likes">
+  <a [routerLink]="['/likers']" [queryParams]="{ id: this.post?.id }"
+    >{{ this.post?.countLikes }} вподобайок</a
+  >
+</div>

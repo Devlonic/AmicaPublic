@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amica.API.WebServer", "AmicaAPI\Amica.API\Amica.API.WebServer.csproj", "{19A60296-159A-4686-AF13-616BD4145B9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amica.API.Images", "Amica.API.Images\Amica.API.Images.csproj", "{EC8856F3-069E-47FC-A013-CFB4A6937FC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amica.API.FileServer", "Amica.API.FileServer\Amica.API.FileServer.csproj", "{B21B0203-E253-42A3-AE6A-03638BFFBFAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileServer", "FileServer", "{F6EA88D3-72DB-4260-9522-8BE25D52E467}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServer", "WebServer", "{0F26BCF4-41B2-4D2D-ABED-3CC59CD6F299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19A60296-159A-4686-AF13-616BD4145B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A60296-159A-4686-AF13-616BD4145B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A60296-159A-4686-AF13-616BD4145B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A60296-159A-4686-AF13-616BD4145B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8856F3-069E-47FC-A013-CFB4A6937FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8856F3-069E-47FC-A013-CFB4A6937FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8856F3-069E-47FC-A013-CFB4A6937FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8856F3-069E-47FC-A013-CFB4A6937FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21B0203-E253-42A3-AE6A-03638BFFBFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21B0203-E253-42A3-AE6A-03638BFFBFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21B0203-E253-42A3-AE6A-03638BFFBFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21B0203-E253-42A3-AE6A-03638BFFBFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19A60296-159A-4686-AF13-616BD4145B9A} = {0F26BCF4-41B2-4D2D-ABED-3CC59CD6F299}
+		{EC8856F3-069E-47FC-A013-CFB4A6937FC3} = {F6EA88D3-72DB-4260-9522-8BE25D52E467}
+		{B21B0203-E253-42A3-AE6A-03638BFFBFAF} = {F6EA88D3-72DB-4260-9522-8BE25D52E467}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E13083D4-EBF3-45A9-8CC0-D980363DF936}
+	EndGlobalSection
+EndGlobal

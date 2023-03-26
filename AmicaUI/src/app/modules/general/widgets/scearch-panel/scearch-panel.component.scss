@@ -1,0 +1,115 @@
+@use "./../../../../../styles.scss";
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  ::selection {
+    background-color: styles.$primary-text-color;
+    color: styles.$primary-background;
+  }
+}
+
+.main-wrapper {
+  background: styles.$primary-background;
+  width: 25%;
+  height: 100vh;
+  border-right: 1px solid styles.$secondary-background;
+}
+
+.form-wrapper {
+  border-bottom: 1px solid styles.$secondary-background;
+}
+
+form {
+  display: block;
+  padding: 20px;
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+    input {
+      background: styles.$primary-background;
+      color: styles.$primary-text-color;
+      text-align: left;
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #757575;
+    }
+    input:focus {
+      outline: none;
+    }
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -20px;
+      font-size: 14px;
+      color: #81d8d0;
+    }
+    label {
+      color: #999;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+  }
+}
+h4 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #aab7b8;
+  line-height: 2;
+  margin-top: 5px;
+}
+h4:before,
+h4:after {
+  height: 1.5px;
+  display: inline-block;
+  width: 100px;
+  background: #e5e7e9;
+  border-right: 1px white;
+  content: "";
+  margin-left: 10px;
+  padding: 1px;
+  margin-right: 10px;
+}
+
+p {
+  text-align: center;
+  a {
+    margin: 1em 0;
+    text-align: center;
+    color: styles.$primary-color;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  a:hover {
+    color: adjust-color($color: styles.$primary-color, $lightness: 10%);
+    text-decoration: none;
+  }
+}
+
+.box {
+  border-bottom: 1px solid #d0d3d4 !important;
+  border-top: 1px solid #d0d3d4 !important;
+  height: 35px;
+  background: #ecf0f1;
+  p {
+    text-align: center;
+    padding: 50px;
+    font-size: 16px;
+  }
+}
+
+.disabled {
+  color: gray !important;
+}

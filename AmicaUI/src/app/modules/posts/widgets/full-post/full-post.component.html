@@ -1,0 +1,176 @@
+<div class="wrapper">
+  <div class="profile-post">
+    <div class="pfoto-block">
+      <div class="photo">
+        <img class="photoi" src="{{ this.post?.primaryImage }}" alt="" />
+      </div>
+    </div>
+    <div class="desctiption-block">
+      <div class="top-wrapper">
+        <div class="wrapper overflow-scroll-y">
+          <div class="name-block">
+            <a
+              [routerLink]="['/profiles']"
+              [queryParams]="{ nickname: this.post?.author?.nickName }"
+              class="name-block"
+            >
+              <app-round-linked-image
+                [imageUrl]="this.post?.author?.profilePhoto + '/4'"
+                [style]="{
+                  width: '2em',
+                  height: '2em'
+                }"
+              ></app-round-linked-image>
+              <div class="colum1">
+                <div class="name-row">
+                  <div class="username">{{ this.post?.author?.nickName }}</div>
+                  <!-- <span class="dot">•</span> -->
+                  <!-- <div class="follow">Follow</div> -->
+                </div>
+                <!-- <div class="city-row"><a>Луцьк</a></div> -->
+              </div>
+            </a>
+
+            <div class="settings-column">
+              <svg
+                aria-label="Більше"
+                class="_ab6-"
+                color="#fafafa"
+                fill="#fafafa"
+                height="24"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <circle cx="12" cy="12" r="1.5"></circle>
+                <circle cx="6" cy="12" r="1.5"></circle>
+                <circle cx="18" cy="12" r="1.5"></circle>
+              </svg>
+            </div>
+          </div>
+          <a
+            [routerLink]="['/profiles']"
+            [queryParams]="{ nickname: this.post?.author?.nickName }"
+          >
+            <div class="decription">
+              <div class="user-image-column">
+                <app-round-linked-image
+                  [imageUrl]="this.post?.author?.profilePhoto + '/4'"
+                  [style]="{
+                    width: '2em',
+                    height: '2em'
+                  }"
+                ></app-round-linked-image>
+              </div>
+              <div class="deskription-column">
+                <div class="text">
+                  <p>
+                    <span class="nick">{{ this.post?.author?.nickName }}</span>
+                    {{ this.post?.title }}
+                    <span
+                      ><br /><br />
+                      {{ this.post?.dateCreated | date }}</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="desctiption-lower-block"></div>
+            </div>
+          </a>
+          <div class="comments-wrapoer">
+            <app-comments-list [comments]="this.comments"></app-comments-list>
+          </div>
+        </div>
+      </div>
+
+      <div class="options-block">
+        <div class="options">
+          <app-like-button [post]="this.post"></app-like-button>
+          <div class="comment">
+            <svg
+              color="#fafafa"
+              fill="#fafafa"
+              height="24"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+          <!-- <div class="retweet">
+            <svg
+              aria-label="Поширити допис"
+              class="_ab6-"
+              color="#fafafa"
+              fill="#fafafa"
+              height="24"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <line
+                fill="none"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+                x1="22"
+                x2="9.218"
+                y1="3"
+                y2="10.083"
+              ></line>
+              <polygon
+                fill="none"
+                points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></polygon>
+            </svg>
+          </div>
+          <div class="save">
+            <svg
+              aria-label="Зберегти"
+              class="_ab6-"
+              color="#fafafa"
+              fill="#fafafa"
+              height="24"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <polygon
+                fill="none"
+                points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></polygon>
+            </svg>
+          </div> -->
+        </div>
+        <app-likers-link [post]="this.post"></app-likers-link>
+        <div class="form-wrapper">
+          <app-add-comment-form
+            [currentComments]="this.comments"
+            [post]="this.post"
+          ></app-add-comment-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

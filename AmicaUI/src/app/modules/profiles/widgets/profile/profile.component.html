@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="header">
+    <app-profile-header
+      [isFollowProcessing]="this.isFollowingProcessing"
+      (follow)="this.followHandler($event)"
+      [profile]="this.profile"
+    ></app-profile-header>
+  </div>
+  <div class="posts">
+    <app-profile-posts
+      (loadMorePostsEvent)="this.loadMorePostsHandler($event)"
+      [posts]="this.posts"
+      [isLoading]="this.isLoading"
+    ></app-profile-posts>
+  </div>
+</div>

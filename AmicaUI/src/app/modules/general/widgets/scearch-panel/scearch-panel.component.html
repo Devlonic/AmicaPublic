@@ -1,0 +1,26 @@
+<div class="main-wrapper">
+  <div class="form-wrapper">
+    <form method="post" (ngSubmit)="this.onScearchAsync()">
+      <div class="group">
+        <input
+          minlength="1"
+          maxlength="100"
+          type="text"
+          name="query"
+          [(ngModel)]="this.query"
+          required
+        />
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Перші літери профіля</label>
+      </div>
+      <p>
+        <app-loading-button [label]="'Знайти'"></app-loading-button>
+        <button class="btn btn-secondary p-2" type="reset">X</button>
+      </p>
+    </form>
+  </div>
+  <div class="results-wrapper">
+    <app-profiles-list [profiles]="this.profiles"></app-profiles-list>
+  </div>
+</div>

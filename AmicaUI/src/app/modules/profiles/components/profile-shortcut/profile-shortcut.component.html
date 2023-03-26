@@ -1,0 +1,25 @@
+<div class="main-wrapper">
+  <a
+    [routerLink]="['../profiles']"
+    [queryParams]="{ nickname: this.profile?.nickName }"
+  >
+    <div class="image-wrapper">
+      <app-round-linked-image
+        [imageUrl]="this.profile?.profilePhoto + '/4'"
+        [style]="{
+          width: '3em',
+          height: '3em'
+        }"
+      ></app-round-linked-image>
+    </div>
+
+    <div class="names-wrapper">
+      <p>
+        <b>{{ profile?.nickName }}</b>
+      </p>
+      <p>
+        <span>{{ profile?.fullName }}</span>
+      </p>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,22 @@
+<div class="form-wrapper">
+  <form #commentform (ngSubmit)="onCreateComment()">
+    <div class="write">
+      <input
+        required
+        minlength="3"
+        maxlength="100"
+        type="text"
+        placeholder="Додайте коментар..."
+        name="comment-text"
+        [(ngModel)]="this.commentText"
+      />
+    </div>
+    <button
+      type="submit"
+      class="upload"
+      [disabled]="this.commentText.length < 3 || this.commentText.length > 100"
+    >
+      Опублікувати
+    </button>
+  </form>
+</div>

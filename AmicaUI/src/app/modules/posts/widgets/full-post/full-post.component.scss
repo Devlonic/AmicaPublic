@@ -1,0 +1,179 @@
+@use "./../../../../../styles.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+.profile-post {
+  * {
+    box-sizing: content-box !important;
+  }
+  display: flex;
+  background-color: styles.$secondary-background;
+  min-width: 100%;
+  .pfoto-block {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    .photo {
+      width: 563px;
+      height: 711px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .photoi {
+        max-width: 563px;
+        max-height: 711px;
+      }
+    }
+  }
+  .desctiption-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .user-image {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      background-image: url("https://w7.pngwing.com/pngs/758/483/png-transparent-eyebrow-the-good-wife-face-cheek-round-face-face-cosmetics-eye.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .username {
+      vertical-align: middle;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      color: white;
+      flex-direction: row;
+    }
+    .name-block {
+      text-decoration: none;
+      justify-content: space-between;
+      display: flex;
+      .colum1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 14px;
+      }
+      padding: 14px 4px 14px 16px;
+      height: 42px;
+      display: flex;
+      .name-row {
+        display: flex;
+        .dot {
+          margin-left: 4px;
+          margin-right: 4px;
+          color: white;
+        }
+        .follow {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 18px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif;
+          color: rgb(0, 149, 246);
+          cursor: pointer;
+        }
+      }
+      .city-row {
+        display: flex;
+        color: white;
+        a {
+          cursor: pointer;
+        }
+      }
+      .settings-column {
+        display: flex;
+        margin-left: 220px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      .decription {
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        .user-image-column {
+          margin: 0 18px 0 0;
+        }
+        .deskription-column {
+          display: flex;
+          .text {
+            .nick {
+              font-weight: 600;
+              color: white;
+              text-decoration: none;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 14px;
+              color: rgb(168, 168, 168);
+            }
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .options-block {
+    .options {
+      border-top: 1px solid rgb(48, 48, 48);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 4px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 8px;
+      padding-top: 6px;
+      div {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        padding: 8px;
+      }
+      .save {
+        margin-left: 67%;
+      }
+    }
+    .likes {
+      color: rgb(255, 255, 255);
+      padding-left: 23px;
+      padding-right: 16px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      a {
+        cursor: pointer;
+      }
+      margin-bottom: 36px;
+    }
+    .info {
+      display: flex;
+    }
+    span {
+      padding-left: 19px;
+      padding-right: 12px;
+      padding-bottom: 6px;
+      color: rgb(142, 142, 142);
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}
+
+.form-wrapper {
+  margin-bottom: 1em;
+}
+
+.overflow-scroll-y {
+  overflow-y: auto;
+}

@@ -1,0 +1,54 @@
+<div class="block">
+  <h1 class="logo">Amica</h1>
+  <form action="#" method="POST" (ngSubmit)="onLogin()">
+    <div class="group">
+      <input
+        minlength="1"
+        maxlength="100"
+        type="text"
+        name="login"
+        (keyup)="removeError()"
+        [(ngModel)]="signIn.login"
+        required
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Логін</label>
+    </div>
+
+    <div class="group">
+      <input
+        (keyup)="removeError()"
+        type="password"
+        name="password"
+        [(ngModel)]="signIn.password"
+        required
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Пароль</label>
+    </div>
+    <app-loading-button
+      [canClick]="signIn.password.length >= 8 && signIn.login.length > 2"
+      [isLoading]="processing"
+      [label]="'Увійти'"
+    ></app-loading-button>
+    <div
+      #formError
+      class="alert alert-warning alert-dismissible fade"
+      role="alert"
+    >
+      <strong>От халепа!</strong>
+      <span #formErrorText></span>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  </form>
+  <h4>OR</h4>
+  <p><a class="disabled">Увійти за допомогою Google</a></p>
+  <p><a class="disabled">Забули пароль?</a></p>
+</div>

@@ -1,0 +1,45 @@
+@use "./../../../../styles.scss";
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 14px;
+  background: styles.$primary-color;
+  color: rgb(73, 72, 72);
+  height: 50px;
+  width: 100%;
+  font-variant: small-caps;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.button:hover {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 14px;
+  color: rgb(73, 72, 72);
+  height: 50px;
+  width: 100%;
+  text-decoration: none;
+  font-variant: small-caps;
+  background: adjust-color(
+    $color: styles.$primary-color,
+    $hue: 0,
+    $saturation: 0%,
+    $lightness: 10%
+  );
+}
+
+.button:active {
+  background: adjust-color(
+    $color: styles.$primary-color,
+    $hue: 0,
+    $saturation: 0%,
+    $lightness: 20%
+  );
+}

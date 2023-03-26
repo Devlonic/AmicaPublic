@@ -1,0 +1,16 @@
+.like {
+  .notliked {
+    box-sizing: content-box;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+  }
+  .liked {
+    box-sizing: content-box;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+  }
+}

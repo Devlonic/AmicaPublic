@@ -1,0 +1,26 @@
+@use "./../../../../../styles.scss";
+.main-wrapper {
+  padding: 1em 2em;
+  display: flex;
+  a {
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    .image-wrapper {
+      margin-right: 1em;
+    }
+    .names-wrapper {
+      b {
+        color: styles.$primary-text-color;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+      p {
+        color: styles.$secondary-text-color;
+      }
+    }
+  }
+}
+.main-wrapper:hover {
+  background-color: styles.$secondary-background;
+}

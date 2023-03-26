@@ -1,0 +1,31 @@
+<div class="content">
+  <div
+    *ngIf="this.loadingError != null"
+    class="alert alert-warning alert-dismissible fade show"
+    role="alert"
+  >
+    <strong>Holy guacamole!</strong>
+    <p>Posts loading error</p>
+    <p>{{ this.loadingError }}</p>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="no-posts" *ngIf="this.posts?.length == 0">
+    <div class="text-centred">
+      <h1>
+        <a routerLink="scearch" class="link">Слідкуйте</a> за кимось, щоб
+        побачити пости
+        <span class="yellow-text">=)</span>
+      </h1>
+    </div>
+  </div>
+  <div class="posts-list">
+    <div *ngFor="let post of posts" class="post">
+      <app-feed-post [post]="post"></app-feed-post>
+    </div>
+  </div>
+</div>

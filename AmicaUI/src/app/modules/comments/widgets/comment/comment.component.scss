@@ -1,0 +1,28 @@
+a {
+  text-decoration: none;
+  .decription {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    .user-image-column {
+      margin: 0 18px 0 0;
+    }
+    .deskription-column {
+      display: flex;
+      .text {
+        .nick {
+          font-weight: 600;
+          color: white;
+          text-decoration: none;
+        }
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+          color: rgb(168, 168, 168);
+        }
+        color: white;
+      }
+    }
+  }
+}

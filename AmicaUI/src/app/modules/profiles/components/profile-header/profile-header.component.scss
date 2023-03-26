@@ -1,0 +1,107 @@
+@use "./../../../../../styles.scss";
+.wrapper {
+  background-color: styles.$primary-background;
+  color: styles.$primary-text-color;
+  padding: 1em 0;
+
+  .profile {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    .image-wrapper {
+      margin-right: 20px;
+      .user-image {
+        width: 150px;
+        height: 150px;
+        margin-right: 4.43vw;
+        border-radius: 100px;
+        background-size: 100% !important;
+        background-repeat: no-repeat !important;
+        background-color: white;
+        background-position: center !important;
+      }
+    }
+    .user-information {
+      .name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 550px;
+        span {
+          display: flex;
+          font-size: 28px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif;
+          font-weight: 300;
+          margin-top: -5px;
+          margin-bottom: -6;
+        }
+        .settings {
+          cursor: pointer;
+          display: flex;
+          padding: 8px;
+        }
+        .change {
+          cursor: pointer;
+          display: flex;
+          background-color: transparent;
+          border: 1px solid rgb(85, 85, 85);
+          color: white;
+          padding-left: 9px;
+          padding-top: 5px;
+          padding-right: 9px;
+          padding-bottom: 5px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif;
+          font-weight: 600;
+          font-size: 14px;
+          padding: 5px 9px;
+          margin-left: 20px;
+        }
+      }
+      .profile-management-panel {
+        display: flex;
+      }
+      .curs {
+        cursor: pointer;
+      }
+      .info {
+        line-height: 24px;
+        font-weight: 400;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        margin-top: 20px;
+        a {
+          text-decoration: none;
+          transition: 100ms;
+          color: styles.$primary-text-color;
+        }
+        a:hover {
+          color: styles.$primary-color;
+        }
+        a:active {
+          color: styles.$primary-color-light;
+        }
+        span {
+          margin-right: 40px;
+        }
+        margin-bottom: 20px;
+      }
+      .user-pseudonim {
+        font-size: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 21px;
+        font-weight: 600;
+      }
+      .user-deskription {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+      }
+    }
+  }
+}

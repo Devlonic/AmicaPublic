@@ -1,0 +1,6 @@
+@use "./../../../../../styles.scss";
+
+.wrapper {
+  background-color: styles.$primary-background;
+  height: 100vh;
+}

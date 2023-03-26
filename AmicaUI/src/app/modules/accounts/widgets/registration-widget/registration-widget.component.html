@@ -1,0 +1,95 @@
+<div class="block">
+  <h1 class="logo">Amica</h1>
+  <form action="#" method="POST" (ngSubmit)="onRegister()">
+    <div class="group">
+      <input
+        autocomplete="email"
+        autocapitalize="off"
+        [(ngModel)]="this.request.email"
+        type="email"
+        name="email"
+        required
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Електрона адреса</label>
+    </div>
+    <div class="group">
+      <input
+        [(ngModel)]="this.request.fullName"
+        type="text"
+        autocapitalize="sentences"
+        name="fullname"
+        required
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Повне ім'я</label>
+    </div>
+    <div class="group">
+      <input
+        [(ngModel)]="this.request.nickname"
+        type="text"
+        name="nickname"
+        required
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Логін</label>
+    </div>
+    <div class="group">
+      <input
+        [(ngModel)]="this.request.password"
+        type="password"
+        name="password"
+        required
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Пароль</label>
+    </div>
+
+    <div class="group">
+      <input
+        name="photo"
+        (change)="this.fileSelected($event)"
+        type="file"
+        class="custom-file-input"
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Ваше фото</label>
+    </div>
+    <div class="group captcha">
+      <re-captcha
+        name="captchaV2"
+        [siteKey]="this.captchaKey"
+        (resolved)="this.captchaResolved($event)"
+        (error)="this.captchaError($event)"
+      ></re-captcha>
+    </div>
+    <div class="group">
+      <app-loading-button
+        [isLoading]="this.processing"
+        [label]="'Продовжити'"
+      ></app-loading-button>
+    </div>
+
+    <div class="group">
+      <div
+        #formError
+        class="alert alert-warning alert-dismissible fade"
+        role="alert"
+      >
+        <strong>От халепа!</strong>
+        <span #formErrorText></span>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </form>
+</div>

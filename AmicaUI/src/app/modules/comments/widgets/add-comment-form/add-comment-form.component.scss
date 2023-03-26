@@ -1,0 +1,53 @@
+@use "./../../../../../styles.scss";
+.form-wrapper {
+  form {
+    margin-top: 10px;
+    padding-left: 19px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    .smile {
+      padding-right: 12px;
+      cursor: pointer;
+    }
+    .write {
+      width: 100%;
+
+      input[type="text"] {
+        font-weight: 400;
+        width: 90%;
+        border: none;
+        justify-content: center;
+        display: flex;
+        resize: none;
+        background-color: transparent;
+        color: styles.$primary-text-color;
+      }
+      :active,
+      :hover,
+      :focus {
+        outline: 0;
+        outline-offset: 0;
+      }
+    }
+    .upload {
+      border: 0;
+      background-color: transparent;
+      height: 18px;
+      justify-content: center;
+      display: flex;
+      font-size: 16px;
+      color: styles.$primary-color;
+      cursor: pointer;
+      transition: 200ms;
+    }
+    .upload:hover {
+      color: styles.$primary-color-light;
+    }
+    .upload:active {
+      color: styles.$primary-text-color;
+    }
+  }
+}

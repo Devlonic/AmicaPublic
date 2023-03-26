@@ -1,0 +1,141 @@
+<div class="post-wrapper">
+  <div class="post">
+    <a
+      [routerLink]="['profiles']"
+      [queryParams]="{ nickname: this.post?.author?.nickName }"
+      ><div class="group">
+        <div
+          style="
+        background-image: url('{{ this.post?.author?.profilePhoto }}/4');
+      "
+          class="user-image"
+        ></div>
+        <a
+          [routerLink]="['profiles']"
+          [queryParams]="{ nickname: this.post?.author?.nickName }"
+        >
+          <div class="username">{{ this.post?.author?.nickName }}</div></a
+        >
+        <div class="else">
+          <svg
+            aria-label="Більше"
+            class="_ab6-"
+            color="#fff"
+            fill="#fff"
+            height="24"
+            role="img"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <circle cx="12" cy="12" r="1.5"></circle>
+            <circle cx="6" cy="12" r="1.5"></circle>
+            <circle cx="18" cy="12" r="1.5"></circle>
+          </svg>
+        </div>
+      </div>
+    </a>
+
+    <div class="post-link-wrapper">
+      <a [routerLink]="['posts']" [queryParams]="{ id: this.post?.id }">
+        <div
+          style="
+        background-image: url('{{ this.post?.primaryImage }}');
+      "
+          class="main-image"
+        ></div>
+      </a>
+
+      <div class="options">
+        <app-like-button [post]="this.post"></app-like-button>
+        <div class="comment">
+          <svg
+            color="#fff"
+            fill="#fff"
+            height="24"
+            role="img"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+            <path
+              d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+          </svg>
+        </div>
+        <!-- <div class="retweet">
+      <svg
+        aria-label="Поширити допис"
+        class="_ab6-"
+        color="#262626"
+        fill="#262626"
+        height="24"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linejoin="round"
+          stroke-width="2"
+          x1="22"
+          x2="9.218"
+          y1="3"
+          y2="10.083"
+        ></line>
+        <polygon
+          fill="none"
+          points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+          stroke="currentColor"
+          stroke-linejoin="round"
+          stroke-width="2"
+        ></polygon>
+      </svg>
+    </div> -->
+        <!-- <div class="save">
+      <svg
+        aria-label="Зберегти"
+        class="_ab6-"
+        color="#262626"
+        fill="#262626"
+        height="24"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="none"
+          points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        ></polygon>
+      </svg>
+    </div> -->
+      </div>
+      <app-likers-link [post]="this.post"></app-likers-link>
+      <div class="info">
+        <a
+          [routerLink]="['profiles']"
+          [queryParams]="{ nickname: this.post?.author?.nickName }"
+        >
+          <div class="username">{{ this.post?.author?.nickName }}</div></a
+        >
+        {{ this.post?.title }}
+      </div>
+      <span>{{ this.post?.dateCreated | date }}</span>
+      <app-add-comment-form [post]="this.post"></app-add-comment-form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<aside class="sidebar">
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="home" class="nav-link">
+          <h1 class="logo">Amica</h1>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="home" class="nav-link"><span>Головна</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="scearch" class="nav-link"><span>Пошук</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="home" class="nav-link disabled"><span>Quicks</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="home" class="nav-link disabled"
+          ><span>Повідомлення</span></a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="home" class="nav-link disabled"
+          ><span>Сповіщення</span></a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="createPost" class="nav-link"><span>Створити</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="settings" class="nav-link disabled"
+          ><span>Налаштування</span></a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a
+          [routerLink]="['profiles']"
+          [queryParams]="{ nickname: this.profile?.nickName }"
+          class="nav-link nav-row"
+        >
+          <app-round-linked-image
+            [imageUrl]="this.profile?.profilePhoto"
+            [style]="{
+              width: '2em',
+              height: '2em',
+              position: 'absolute',
+              left: '-2em',
+              top: '0.5em'
+            }"
+          ></app-round-linked-image>
+
+          <span>{{ this.profile?.nickName }}</span></a
+        >
+      </li>
+    </ul>
+  </nav>
+</aside>

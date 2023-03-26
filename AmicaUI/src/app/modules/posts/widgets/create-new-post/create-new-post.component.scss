@@ -1,0 +1,235 @@
+@use "./../../../../../styles.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+.profile-post {
+  * {
+    box-sizing: content-box !important;
+  }
+  display: flex;
+  background-color: styles.$secondary-background;
+  min-width: 100%;
+  .pfoto-block {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    .photo {
+      background-color: styles.$primary-background;
+      width: 563px;
+      height: 711px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .photoi {
+        max-width: 563px;
+        max-height: 711px;
+      }
+    }
+  }
+  .desctiption-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .user-image {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      background-image: url("https://w7.pngwing.com/pngs/758/483/png-transparent-eyebrow-the-good-wife-face-cheek-round-face-face-cosmetics-eye.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .username {
+      vertical-align: middle;
+      text-align: center;
+      display: flex;
+      color: white;
+      flex-direction: row;
+    }
+
+    .name-block {
+      .group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 57px;
+        position: relative;
+        .user-image {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .username {
+          color: styles.$primary-text-color;
+          font-size: 14px;
+          justify-content: flex-start;
+          margin-left: 25px;
+          min-height: 40px;
+          width: 378px;
+          height: 22px;
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          // position: absolute;
+          // bottom: -10px;
+        }
+        .else {
+          justify-content: center;
+          width: 44px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+        }
+        div {
+          cursor: pointer;
+        }
+      }
+      justify-content: flex-start;
+      display: flex;
+      .colum1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 14px;
+      }
+      padding: 14px 4px 14px 16px;
+      height: 42px;
+      display: flex;
+      .name-row {
+        display: flex;
+        .dot {
+          margin-left: 4px;
+          margin-right: 4px;
+          color: white;
+        }
+        .follow {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 18px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif;
+          color: rgb(0, 149, 246);
+          cursor: pointer;
+        }
+      }
+      .city-row {
+        display: flex;
+        color: white;
+        a {
+          cursor: pointer;
+        }
+      }
+      .settings-column {
+        display: flex;
+        margin-left: 220px;
+      }
+    }
+
+    .decription {
+      padding: 16px;
+      display: flex;
+      flex-direction: row;
+      .user-image-column {
+        margin: 0 18px 0 0;
+      }
+      .deskription-column {
+        display: flex;
+        .text {
+          a {
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+          }
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            color: rgb(168, 168, 168);
+          }
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.form-wrapper {
+  margin-bottom: 1em;
+}
+
+form {
+  display: block;
+  padding: 20px;
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+    input {
+      background: styles.$primary-background;
+      color: styles.$primary-text-color;
+      text-align: left;
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #757575;
+    }
+    input:focus {
+      outline: none;
+    }
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -20px;
+      font-size: 14px;
+      color: #81d8d0;
+    }
+    label {
+      color: #999;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+  }
+}
+
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "FILE";
+  color: black;
+  display: inline-block;
+  background: styles.$primary-color;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 14px;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}

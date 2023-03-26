@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary-color: #0abbb5;
+$primary-color-light: #19fff7;
+$primary-color-yellow: #f3f310;
+$primary-text-color: #fff;
+$primary-text-disabled: rgb(86, 86, 86);
+$secondary-text-color: rgb(186, 186, 186);
+$primary-gradient: -webkit-linear-gradient($primary-color, rgb(210, 5, 237));
+
+$black: #0f0f0f;
+$primary-background: #1e1e1e;
+$secondary-background: #292929;
+$thirdly-background: #2d2d2d;
+
+body {
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  ::selection {
+    background-color: $black;
+    color: $primary-text-color;
+  }
+}
+.yellow-text {
+  color: $primary-color-yellow;
+}

@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Amica.API.WebServer</name>
+    </assembly>
+    <members>
+        <member name="M:Amica.API.WebServer.Controllers.CommentsController.GetComments(System.Int64,Amica.API.WebServer.Data.DTO.Posts.PaginationGetRequest)">
+            <summary>
+            Get comments for post by post_id with pagination
+            </summary>
+            <param name="post_id"></param>
+            <param name="request"></param>
+            <response code="200">Success</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.CommentsController.Comment(Amica.API.WebServer.Data.DTO.Posts.PostCommentCreateRequest,System.Int64)">
+            <summary>
+            Add comment to post by post_id and identity token
+            </summary>
+            <param name="post_id"></param>
+            <param name="request"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (post not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.CommentsController.DeleteComment(System.String)">
+            <summary>
+            Delete comment by comment_id and identity token
+            </summary>
+            <param name="comment_id"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (comment not found, user is not own this comment, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.CommentsController.UpdateComment(System.String,Amica.API.WebServer.Data.DTO.Posts.PostCommentEditRequest)">
+            <summary>
+            Update comment by comment_id and identity token
+            </summary>
+            <param name="comment_id"></param>
+            <param name="request"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (comment not found, user is not own this comment, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.FollowersController.Follow(System.Int64)">
+            <summary>
+            Follow by profile_id and identity token
+            </summary>
+            <param name="profile_id"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (Already followed, profile not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.FollowersController.UnFollow(System.Int64)">
+            <summary>
+            UnFollow by profile_id and identity token
+            </summary>
+            <param name="profile_id"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (Not followed, profile not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.FollowersController.GetFollowers(System.Int64,Amica.API.WebServer.Data.DTO.Posts.PaginationGetRequest)">
+            <summary>
+            Get followers by profile id with pagination
+            </summary>
+            <param name="profile_id"></param>
+            <param name="request"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="404">Not found problems (profile not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.FollowersController.GetFollowings(System.Int64,Amica.API.WebServer.Data.DTO.Posts.PaginationGetRequest)">
+            <summary>
+            Get followings by profile id with pagination
+            </summary>
+            <param name="profile_id"></param>
+            <param name="request"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="404">Not found problems (profile not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.LikesController.Like(System.Int64)">
+            <summary>
+            Like post by post_id and identity token
+            </summary>
+            <param name="post_id"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (Already liked, post not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.LikesController.UnLike(System.Int64)">
+            <summary>
+            UnLike post by post_id and identity token
+            </summary>
+            <param name="post_id"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (Not liked, post not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.LikesController.GetLikersForPost(System.Int64,Amica.API.WebServer.Data.DTO.Posts.PaginationGetRequest)">
+            <summary>
+            Get likers of post by post_id
+            </summary>
+            <param name="post_id"></param>
+            <param name="request"></param>
+            <response code="200">Success</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Any user problems with request (Not liked, post not found, etc...)</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.PostsController.GetFull(System.Int64)">
+            <summary>
+            Get full post by post_id
+            </summary>
+            <param name="post_id"></param>
+            <response code="200">No problem</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="404">Post not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.PostsController.GetByProfilePagination(System.Int64,Amica.API.WebServer.Data.DTO.Posts.PaginationGetRequest)">
+            <summary>
+            Get reduced posts by profile_id with pagination
+            </summary>
+            <param name="profile_id"></param>
+            <param name="request"></param>
+            <response code="200">No problem</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="404">Post not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.PostsController.GetByProfileAndFollowingsPagination(Amica.API.WebServer.Data.DTO.Posts.PaginationGetRequest)">
+            <summary>
+            Get reduced posts by profile_id by following for feed with pagination
+            </summary>
+            <param name="request"></param>
+            <response code="200">No problem</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="404">Post not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.PostsController.Create(Amica.API.Data.DTO.Posts.PostCreateRequest)">
+            <summary>
+            Create post by identity token
+            </summary>
+            <param name="request"></param>
+            <response code="200">Post created</response>
+            <response code="409">Post create failed by user. No return</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.PostsController.Delete(System.Int64)">
+            <summary>
+            Delete post by post_id
+            </summary>
+            <param name="post_id"></param>
+            <response code="200">Post deleted</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Unauthorized request (User is not owner of requested post)</response>
+            <response code="404">Post with id post_id not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.PostsController.Edit(System.Int64,Amica.API.Data.DTO.Posts.PostEditRequest)">
+            <summary>
+            Edit post by post_id
+            </summary>
+            <param name="post_id"></param>
+            <param name="request"></param>
+            <response code="200">Post edited</response>
+            <response code="401">Unauthenticated request (Wrong, Missing or Expired token)</response>
+            <response code="403">Unauthorized request (User is not owner of requested post)</response>
+            <response code="404">Post with id post_id not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.ProfilesController.GetProfileByNickName(System.String)">
+            <summary>
+            Get profile by profile_nickname
+            </summary>
+            <param name="profile_nickname"></param>
+            <response code="200">Success</response>
+            <response code="404">Profile not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.ProfilesController.FindListByNickNameAsync(System.String)">
+            <summary>
+            Match profiles by part
+            </summary>
+            <param name="part"></param>
+            <response code="200">Success</response>
+            <response code="404">Profiles not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Controllers.ProfilesController.GetProfileById(System.Int64)">
+            <summary>
+            Get profile by id
+            </summary>
+            <param name="id"></param>
+            <response code="200">Success</response>
+            <response code="404">Profile not found</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.WebServer.Data.Identity.Extentions.AmicaIdentityExtentions.AddAmicaIdentity(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Identity.IdentityOptions})">
+            <summary>
+            Adds and configures the identity system for the specified User and Role types.
+            </summary>
+            <param name="services">The services available in the application.</param>
+            <param name="setupAction">An action to configure the <see cref="T:Microsoft.AspNetCore.Identity.IdentityOptions"/>.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Identity.IdentityBuilder"/> for creating and configuring the identity system.</returns>
+        </member>
+        <member name="M:Amica.API.Controllers.AccountsController.SignIn(Amica.API.Data.DTO.SignInRequest)">
+            <summary>
+            Transform (login and password) to (identity token)
+            </summary>
+            <param name="request"></param>
+            <response code="200">User successfully authenticated and token generated</response>
+            <response code="422">Authentication failed by user. Return SignUpResponce with explanation</response>
+            <response code="500">Authentication failed by server. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.Controllers.AccountsController.SignUp(Amica.API.Data.DTO.SignUpRequest)">
+            <summary>
+            Register new user (Create account and linked profile)
+            </summary>
+            <param name="request"></param>
+            <response code="200">User successfully registered</response>
+            <response code="401">Missing captcha token. Return SignUpResponce with explanation</response>
+            <response code="422">Registration failed by user. Return SignUpResponce with explanation</response>
+            <response code="500">Registration failed by server. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.Controllers.wDebugController.WipeAll">
+            <summary>
+            WARNING!
+            Not for production!
+            Drop sql database and create new (All data erased)
+            Drop all Mongo database collections
+            </summary>
+            <response code="200">Success</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.Controllers.wDebugController.CreateRoles">
+            <summary>
+            WARNING!
+            Not for production!
+            Creates is not exists default Amica roles (User, Admin, Moderator, etc... (Watch AmicaRolesSettings) )
+            </summary>
+            <response code="200">Success</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+        <member name="M:Amica.API.Controllers.wDebugController.Fill">
+            <summary>
+            WARNING!
+            Not for production!
+            Seeding data example data
+            </summary>
+            <response code="200">Success</response>
+            <response code="500">Any server problem. Until release returns Exception text</response>
+        </member>
+    </members>
+</doc>

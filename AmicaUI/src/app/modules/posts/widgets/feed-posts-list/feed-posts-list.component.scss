@@ -1,0 +1,35 @@
+@use "./../../../../../styles.scss";
+
+.content {
+  background-color: styles.$secondary-background;
+}
+.no-dots {
+  list-style-type: none;
+}
+.posts-list {
+}
+.post {
+  margin-bottom: 3em;
+}
+.link {
+  color: styles.$primary-color;
+  transition: 100ms;
+}
+.link:hover {
+  color: styles.$primary-color-light;
+}
+.link:active {
+  color: styles.$primary-text-color;
+}
+.no-posts {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text-centred {
+    h1 {
+      color: styles.$primary-text-color;
+    }
+  }
+}

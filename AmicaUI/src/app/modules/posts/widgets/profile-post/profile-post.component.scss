@@ -1,0 +1,68 @@
+.photo:hover {
+  cursor: pointer;
+  .animation-panel {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .likes-wrap {
+      display: flex;
+      flex-direction: row;
+    }
+    .comments-wrap {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+.photo {
+  position: relative;
+  margin-right: 28px;
+  width: 293px;
+  height: 293px;
+  .post-image {
+    width: 293px;
+    height: 293px;
+    background-position: center !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+  }
+  .animation-panel {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    .likes-wrap {
+      margin-right: 30px;
+      .emoji-like {
+        background-repeat: no-repeat;
+        background-position: -340px -333px;
+        height: 19px;
+        width: 19px;
+        background-image: url("./../../../../../assets/like.png");
+        margin-right: 7px;
+        margin-top: 2px;
+      }
+    }
+    .emoji-comment {
+      background-repeat: no-repeat;
+      background-position: -382px -333px;
+      height: 19px;
+      width: 19px;
+      background-image: url("./../../../../../assets/like.png");
+      margin-right: 7px;
+      margin-top: 2px;
+    }
+  }
+  .font-likes-comments {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    line-height: 24px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif;
+  }
+}

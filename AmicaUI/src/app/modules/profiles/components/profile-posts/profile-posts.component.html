@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="profile-photos">
+    <div class="photo-row" *ngFor="let row of this.postRows">
+      <div class="post-wrapper" *ngFor="let post of row">
+        <app-profile-post [post]="post"></app-profile-post>
+      </div>
+    </div>
+  </div>
+
+  <app-loading-button
+    (click)="this.onLoadMorePosts()"
+    *ngIf="this.loadedMoreThanZero != false"
+    [isLoading]="this.isLoading == true"
+    [label]="'Load more'"
+  ></app-loading-button>
+
+  <!-- <button class="btn btn-primary p-2 mb-4">Load more</button> -->
+</div>

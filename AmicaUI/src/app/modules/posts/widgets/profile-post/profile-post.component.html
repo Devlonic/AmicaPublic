@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <a [routerLink]="['../posts']" [queryParams]="{ id: this.post?.id }">
+    <div class="photo">
+      <div class="animation-panel">
+        <div class="likes-wrap">
+          <div class="emoji-like"></div>
+          <a class="font-likes-comments">{{ post?.countLikes }}</a>
+        </div>
+        <div class="comments-wrap">
+          <div class="emoji-comment"></div>
+          <a class="font-likes-comments">{{ post?.countComments }}</a>
+        </div>
+      </div>
+      <div
+        class="post-image"
+        style="background: url('{{ post?.primaryImage }}/2') white;"
+      ></div>
+    </div>
+  </a>
+</div>

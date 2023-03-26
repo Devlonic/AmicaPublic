@@ -1,0 +1,13 @@
+@use "./../../../../../styles.scss";
+.likes {
+  padding-left: 19px;
+  padding-right: 12px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  a {
+    user-select: none;
+    color: styles.$primary-text-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

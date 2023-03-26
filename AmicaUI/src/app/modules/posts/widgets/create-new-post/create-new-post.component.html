@@ -1,0 +1,95 @@
+<div class="wrapper">
+  <div class="profile-post">
+    <form class="profile-post" (submit)="this.onCreatePost($event)">
+      <div class="pfoto-block">
+        <div class="photo">
+          <img class="photoi" alt="" #photoPreview />
+        </div>
+      </div>
+      <div class="desctiption-block">
+        <div class="wrapper">
+          <div class="name-block">
+            <div class="group">
+              <div
+                style="
+        background-image: url('{{ this.creator?.profilePhoto }}/4');
+      "
+                class="user-image"
+              ></div>
+              <a
+                [routerLink]="['profiles']"
+                [queryParams]="{ nickname: this.creator?.nickName }"
+              >
+                <div class="username">{{ this.creator?.nickName }}</div></a
+              >
+              <div class="else">
+                <svg
+                  aria-label="Більше"
+                  class="_ab6-"
+                  color="#fff"
+                  fill="#fff"
+                  height="24"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <circle cx="12" cy="12" r="1.5"></circle>
+                  <circle cx="6" cy="12" r="1.5"></circle>
+                  <circle cx="18" cy="12" r="1.5"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <form (submit)="this.onCreatePost($event)">
+            <div class="group">
+              <input
+                [minlength]="3"
+                [maxlength]="20"
+                type="text"
+                name="title"
+                [(ngModel)]="this.req.title"
+                required
+              />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Заголовок</label>
+            </div>
+            <div class="group">
+              <input
+                name="image"
+                (change)="this.fileSelected($event)"
+                type="file"
+                class="custom-file-input"
+              />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Виберіть головну картинку</label>
+            </div>
+            <div class="group">
+              <app-loading-button
+                [canClick]="
+                  req.title.length > 0 &&
+                  req.title.length <= 20 &&
+                  req.images.length >= 1
+                "
+                [label]="'Опублікувати'"
+              ></app-loading-button>
+            </div>
+            <div *ngIf="this.error !== undefined" class="group">
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                <strong>Holy guacamole!</strong>
+                <span>{{ this.error }}</span>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

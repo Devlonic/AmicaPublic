@@ -1,0 +1,19 @@
+@use "./../../../../../styles.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: styles.$primary-background;
+  .profile-photos {
+    align-items: center;
+    max-width: 935px;
+    .photo-row {
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

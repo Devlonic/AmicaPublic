@@ -1,0 +1,29 @@
+<a
+  [routerLink]="['/profiles']"
+  [queryParams]="{ nickname: this.comment?.author?.nickName }"
+>
+  <div class="decription">
+    <div class="user-image-column">
+      <app-round-linked-image
+        [imageUrl]="this.comment?.author?.profilePhoto + '/4'"
+        [style]="{
+          width: '2em',
+          height: '2em'
+        }"
+      ></app-round-linked-image>
+    </div>
+    <div class="deskription-column">
+      <div class="text">
+        <p>
+          <span class="nick">{{ this.comment?.author?.nickName }}</span>
+          {{ this.comment?.text }}
+          <span
+            ><br /><br />
+            {{ this.comment?.date | date }}</span
+          >
+        </p>
+      </div>
+    </div>
+    <div class="desctiption-lower-block"></div>
+  </div>
+</a>

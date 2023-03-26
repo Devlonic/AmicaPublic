@@ -1,0 +1,8 @@
+@use "./../../../../../styles.scss";
+
+.wrapper {
+  background-color: styles.$primary-background;
+  .header {
+    margin-bottom: 2em;
+  }
+}

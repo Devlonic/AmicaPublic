@@ -1,0 +1,42 @@
+@media only screen and (max-width: 576px) {
+}
+@media only screen and (min-width: 576px) {
+}
+@media only screen and (max-width: 650px) {
+  .logo {
+    font-size: 48px;
+  }
+  .block {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  form {
+    width: 75%;
+  }
+
+  h4:after,
+  h4:before {
+    background-color: white;
+    margin-left: 0px;
+    padding: 0px;
+    margin-right: 0px;
+  }
+
+  h4 {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1400px) {
+}
+@media only screen and (max-width: 350px) {
+  .logo {
+    font-size: 28px;
+  }
+}

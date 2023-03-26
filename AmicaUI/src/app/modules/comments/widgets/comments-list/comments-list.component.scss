@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .comments-wrapper {
+    height: 25em;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+  }
+}
